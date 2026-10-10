@@ -139,16 +139,16 @@ export const NavItems = ({ items, className, onItemClick, activeHref }: NavItems
           aria-current={activeHref === item.link ? "page" : undefined}
           className={cn(
             "relative rounded-full px-4 py-3 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--espresso)]",
-            activeHref === item.link && "text-[var(--espresso)]",
+            activeHref === item.link && "text-[var(--cream)]",
           )}
         >
           {activeHref === item.link && hovered !== idx && (
             <span
               aria-hidden="true"
-              className="absolute inset-0 rounded-full bg-[var(--peach)]/70 shadow-[inset_0_0_0_1px_rgba(223,137,111,0.18)]"
+              className="absolute inset-0 rounded-full bg-[var(--coral)] shadow-[inset_0_0_0_1px_rgba(255,253,248,0.2)]"
             />
           )}
-          {hovered === idx && (
+          {hovered === idx && activeHref !== item.link && (
             <motion.span
               layoutId={hoverId}
               aria-hidden="true"
